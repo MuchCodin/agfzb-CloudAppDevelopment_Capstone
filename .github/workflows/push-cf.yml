@@ -7,7 +7,7 @@ env:
   IBM_CLOUD_REGION: us-south
   IBM_CLOUD_GROUP: Default
   IBM_CLOUD_SPACE: djangoserver-space
-  IBM_CLOUD_ORG: AfroDevForces
+  IBM_CLOUD_ORG: AfroDevForce
   MANIFEST_NAME: manifest.yml
   IBM_CLOUD_API: ${{secrets.CAPSTONE_PROJECT_API_KEY}}
 
@@ -36,7 +36,7 @@ jobs:
           ibmcloud login --apikey "$IBM_CLOUD_API" -r "$IBM_CLOUD_REGION" -g "$IBM_CLOUD_GROUP"
         shell: bash
       - name: Target CF
-        run: ibmcloud target --cf-api https://api.us-south.cf.cloud.ibm.com -r us-south -o AfroDevForces -s djangoserver-space
+        run: ibmcloud target --cf-api https://api.us-south.cf.cloud.ibm.com -r us-south -o AfroDevForce -s djangoserver-space
         shell: bash
       - name: List all applications
         run: ibmcloud cf apps
